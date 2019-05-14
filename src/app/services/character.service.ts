@@ -24,4 +24,31 @@ export class CharacterService {
         }
       );
   }
+
+  getCharacter(url): Observable<any>  {
+    return this.http.get(url)
+      .map(
+        (response: Response) => {
+          return response;
+        }
+      );
+  }
+
+  getMovies(): Observable<any>  {
+    return this.http.get('https://swapi.co/api/films')
+      .map(
+        (response: Response) => {
+          return response;
+        }
+      );
+  }
+
+  getSpecies(): Observable<any>  {
+    return this.http.get('https://swapi.co/api/species')
+      .map(
+        (response: Response) => {
+          return response;
+        }
+      );
+  }
 }

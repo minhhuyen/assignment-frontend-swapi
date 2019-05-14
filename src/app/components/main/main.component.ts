@@ -16,8 +16,22 @@ export class MainComponent implements OnInit {
       .subscribe(
         data => {
           this.characters = data.results;
-          console.log('vehicle data', data);
         });
+
   }
 
+  /**
+   * Updates the character list in the view
+   *
+   * @param {any} characters
+   */
+  updateCharacterList(characters: any) {
+    this.characters = [];
+    characters.map(character => {
+      this.characterService.getCharacter(character).subscribe(
+        data => {
+          this.characters.push(data);
+        });
+    });
+  }
 }

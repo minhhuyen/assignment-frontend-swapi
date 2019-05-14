@@ -1,6 +1,8 @@
 <div class="container">
   <h2>List of Movie Characters</h2>
-  <app-character-filter></app-character-filter>
+  <app-character-filter
+    (updateCharacterEvent)="updateCharacterList($event)"
+  ></app-character-filter>
   <ul>
     <li class="list-group"
         *ngFor="let character of characters; let i = index"
