@@ -15,4 +15,13 @@ export class CharacterService {
         }
       );
   }
+
+  getCharacterType(url): Observable<any>  {
+    return this.http.get(url)
+      .map(
+        (response: Response) => {
+          return response;
+        }
+      );
+  }
 }

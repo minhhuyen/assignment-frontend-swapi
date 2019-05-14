@@ -5,8 +5,10 @@
     <li class="list-group"
         *ngFor="let character of characters; let i = index"
         class="list-group-item">
-      <span>{{ i + 1 }}. </span>
-      <span>{{ character.name }}</span>
+      <a [routerLink]="['/character-details/' + i]" [routerLinkActive]="['router-link-active']" >
+        <span>{{ i + 1 }}. </span>
+        <span>{{ character.name }}</span>
+      </a>
     </li>
   </ul>
 </div>

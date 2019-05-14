@@ -1,3 +1,32 @@
-<p>
-  character-details works!
-</p>
+<div class="container">
+  <h2>Character Details</h2>
+  <div>
+    <span class="label">Name: </span>
+    <span>{{ characterName }}</span>
+  </div>
+  <div>
+    <span class="label">Species: </span>
+    <span *ngFor="let specie of species; let i = index">
+      {{ specie }}
+      <span *ngIf="i !== species.length - 1">, </span>
+    </span>
+  </div>
+  <div>
+    <span class="label">Movies: </span>
+    <span *ngFor="let movie of films; let i = index">
+      {{ movie }}
+      <span *ngIf="i !== films.length - 1">, </span>
+    </span>
+
+  </div>
+  <div>
+  <span class="label">Starships: </span>
+  <span *ngFor="let starship of starships; let i = index">
+    {{ starship }}
+    <span *ngIf="i !== starships.length - 1">, </span>
+  </span>
+  </div>
+  <div class="button-container">
+    <button class="btn-info" type="button" (click)="backToMain()">Back to main</button>
+  </div>
+</div>
