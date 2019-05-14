@@ -1,0 +1,19 @@
+form {
+  text-align: center;
+
+  label {
+    margin-left: 10px;
+
+    input {
+      margin-right: 5px;
+    }
+  }
+
+  input {
+    margin-right: 10px;
+
+    &:first-of-type {
+      margin-left: 10px;
+    }
+  }
+}

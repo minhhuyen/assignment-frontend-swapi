@@ -1,0 +1,13 @@
+<form [formGroup]="filterForm">
+  <label class="checkbox-inline">
+    <input formControlName="movie" type="checkbox" value="">
+    Movies
+  </label>
+  <label class="checkbox-inline">
+    <input formControlName="species" type="checkbox" value="">
+    Species
+  </label>
+  <input class="checkbox-inline minyear" formControlName="minyear" type="text" placeholder="Year from" value="">
+  <input class="checkbox-inline minyear" formControlName="maxyear" type="text" placeholder="Year to" value="">
+  <button type="button">Filter</button>
+</form>

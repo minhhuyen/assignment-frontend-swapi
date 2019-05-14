@@ -1,0 +1,13 @@
+.container {
+  h2 {
+    text-align: center;
+  }
+
+  ul {
+    li:hover {
+      color: blue;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
